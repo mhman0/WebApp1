@@ -11,3 +11,34 @@
 
     <button type="submit">Login</button>
 </form>
+
+
+@code{
+    private string? username;
+    private string? password;
+    private string? message;
+
+    private async Task HandleLogin()
+    {
+        // Your authentication logic here
+        // For simplicity, I'll just display a message in this example.
+
+        if (IsValidUser(username, password))
+        {
+            // Successful login, display a success message
+            message = "Login successful!";
+        }
+        else
+        {
+            // Failed login, display an error message
+            message = "Invalid username or password. Please try again.";
+        }
+    }
+
+    private bool IsValidUser(string? username, string? password)
+    {
+        // Implement your user authentication logic here
+        // For simplicity, let's assume a hardcoded username and password
+        return username == "demo" && password == "password";
+    }
+}

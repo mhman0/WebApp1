@@ -1,16 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<TabbedPage
+<ContentPage
     x:Class="WebApp1.MainPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:WebApp1">
+    xmlns:local="clr-namespace:WebApp1"
+    BackgroundColor="{DynamicResource PageBackgroundColor}">
 
-    <ContentPage Title="Home">
-        <BlazorWebView x:Name="blazorWebView" HostPage="wwwroot/index.html">
-            <BlazorWebView.RootComponents>
-                <RootComponent ComponentType="{x:Type local:Routes}" Selector="#app" />
-            </BlazorWebView.RootComponents>
-        </BlazorWebView>
-    </ContentPage>
+    <BlazorWebView x:Name="blazorWebView" HostPage="wwwroot/index.html">
+        <BlazorWebView.RootComponents>
+            <RootComponent ComponentType="{x:Type local:Routes}" Selector="#app" />
+        </BlazorWebView.RootComponents>
+    </BlazorWebView>
 
-</TabbedPage>
+</ContentPage>
